@@ -1,3 +1,7 @@
 # Dependency directories
 node_modules
+<<<<<<< HEAD
 .DS_Store
+=======
+.next
+>>>>>>> 7d9d242234446d16d132ccdfdb74f0e0c3b5e5a3
