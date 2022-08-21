@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/arena-deco/static/css/main.c28ad217.css",
+    "main.js": "/arena-deco/static/js/main.45e70ed8.js",
+    "static/js/787.61a45c92.chunk.js": "/arena-deco/static/js/787.61a45c92.chunk.js",
+    "index.html": "/arena-deco/index.html",
+    "main.c28ad217.css.map": "/arena-deco/static/css/main.c28ad217.css.map",
+    "main.45e70ed8.js.map": "/arena-deco/static/js/main.45e70ed8.js.map",
+    "787.61a45c92.chunk.js.map": "/arena-deco/static/js/787.61a45c92.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c28ad217.css",
+    "static/js/main.45e70ed8.js"
+  ]
+}
