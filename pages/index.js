@@ -19,7 +19,7 @@ export default function Home() {
         <div className={styles.content}>
           <h4>Gabriel Lamas</h4>
           <h1>Product Designer</h1>
-          <p>Helping products see the light and shine</p>
+          <p>Here you can see digital products I helped to build, my contacts, and some code projects</p>
 
           <div className={styles.socialContainer}>
             <Link href="https://www.linkedin.com/in/gabriel-lamas/" passHref>
