@@ -18,7 +18,7 @@ export default function Home() {
       <div className={styles.leftContainer}>
         <div className={styles.content}>
           <h4>Gabriel Lamas</h4>
-          <h1>Product Designer</h1>
+          <h1>Product Designer & Frontend Dev</h1>
           <p>Creating products and make your digital experience</p>
 
           <div className={styles.socialContainer}>
