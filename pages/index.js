@@ -1,25 +1,10 @@
-import ThemeSwitcherComponent from "../src/components/ThemeSwitcher";
-import styled from "styled-components";
-
-const FirstMessage = styled.label`
-  background: ${({ theme }) => theme.backgroundBase};
-`;
+import FirstMessageComponent from "../src/components/firstMessage/FirstMessage";
+import ThemeSwitcherComponent from "../src/components/themeSwitcher/ThemeSwitcher";
 
 export function HomePage(props) {
   return (
     <>
-      <FirstMessage>
-        <p>{props.authorName}</p>
-        <h1>{props.title}</h1>
-        <p>{props.description}</p>
-        <div className="social-links">
-          <a href="">Linkedin</a>
-          <a href="">Email</a>
-          <a href="">Github</a>
-          <a href="">Behance</a>
-          <a href="">About me</a>
-        </div>
-      </FirstMessage>
+      <FirstMessageComponent staticProps={props} />
       <ThemeSwitcherComponent />
     </>
   );

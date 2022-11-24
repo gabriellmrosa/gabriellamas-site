@@ -1,19 +1,21 @@
 import { useContext } from "react";
-import styled from "styled-components";
+import ThemeSwitcher from "./style";
 import { ColorModeContext } from "./ColorModeProvider";
-
-const ThemeSwitcher = styled.label`
-  background: ${({ theme }) => theme.backgroundBase};
-`;
 
 export default function ThemeSwitcherComponent() {
   const contexto = useContext(ColorModeContext);
   return (
     <ThemeSwitcher>
       <input type="checkbox" onChange={() => contexto.toggleMode()} />
-      <div className="circle"></div>
-      <img src="/sun.png" alt="sun icon" />
-      <img src="/moon-and-stars.png" alt="Moon and Star icon" />
+      <div className="container">
+        <div className="circle"></div>
+        <img
+          className="moon-icon"
+          src="/moon-and-stars.png"
+          alt="Moon and Star icon"
+        />
+        <img className="sun-icon" src="/sun.png" alt="sun icon" />
+      </div>
     </ThemeSwitcher>
   );
 }
