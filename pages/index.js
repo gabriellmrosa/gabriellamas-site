@@ -1,19 +1,23 @@
-import FirstMessageComponent from "../src/components/firstMessage/FirstMessage";
-import ThemeSwitcherComponent from "../src/components/themeSwitcher/ThemeSwitcher";
+import FirstMessageComponent from "../src/components/FirstMessageComponent";
+import ProjectsComponent from "../src/components/ProjectsComponent";
+import ThemeSwitcherComponent from "../src/components/themeSwitcher";
 
 export function HomePage(props) {
   return (
-    <>
-      <FirstMessageComponent staticProps={props} />
+    <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
       <ThemeSwitcherComponent />
-    </>
+      <div style={{ display: "flex", width: "100%", flex: "1" }}>
+        <FirstMessageComponent staticProps={props} />
+        <ProjectsComponent />
+      </div>
+    </div>
   );
 }
 
 export async function getStaticProps(context) {
   return {
     props: {
-      h1Title: "FRONTEND & UX/UI DESIGNER",
+      h1Title: "UX/UI DESIGNER & FRONTEND",
       authorName: "Gabriel Lamas",
       description:
         "Here you can see digital products I helped to build, my contacts, and some code projects",
