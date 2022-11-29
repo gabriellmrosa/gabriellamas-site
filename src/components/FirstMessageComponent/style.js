@@ -24,6 +24,7 @@ const FirstMessageArea = styled.div`
       margin-top: 24px;
       display: flex;
       gap: 16px;
+      align-items: center;
     }
     a {
       position: relative;

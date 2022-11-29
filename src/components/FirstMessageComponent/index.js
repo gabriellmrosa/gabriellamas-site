@@ -1,12 +1,12 @@
 import FirstMessageArea from "./style";
 import { useContext } from "react";
 import { ColorModeContext } from "../themeSwitcher/ColorModeProvider";
-import ArrowRightIcon from "../../assets/icons/ArrowRightIcon";
 import BehanceIcon from "../../assets/icons/BehanceIcon.js";
 import GithubIcon from "../../assets/icons/GithubIcon.js";
 import GmailIcon from "../../assets/icons/GmailIcon.js";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon.js";
 import TooltipElement from "../../elements/Tooltip";
+import InternLink from "../../elements/InternLink";
 
 function FirstMessageComponent({ staticProps }) {
   const contexto = useContext(ColorModeContext);
@@ -50,10 +50,7 @@ function FirstMessageComponent({ staticProps }) {
             <BehanceIcon theme={contexto.mode} />
             <TooltipElement className={"tooltip"} text="Behance" />
           </a>
-          <a href="#" className="intern-link">
-            <span>About me</span>
-            <ArrowRightIcon theme={contexto.mode} />
-          </a>
+          <InternLink href="/about" text="About me" />
         </div>
       </div>
     </FirstMessageArea>

@@ -66,14 +66,6 @@ const CSSReset = createGlobalStyle`
     font-size: 1.6rem;
     color: ${({ theme }) => theme.textColor700};
   }
-  .intern-link{
-    color: ${({ theme }) => theme.textColor900};
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 150%;
-    display:flex;
-    align-items:center;
-  }
   a:hover{
     opacity:1;
   }
