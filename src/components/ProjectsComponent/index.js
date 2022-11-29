@@ -3,7 +3,7 @@ import ContainerProjectsComponent from "./style";
 function ProjectsComponent() {
   return (
     <ContainerProjectsComponent>
-      <h1>AAAAAAAAAAAAA</h1>
+      <div className="thumb-container"></div>
     </ContainerProjectsComponent>
   );
 }

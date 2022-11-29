@@ -1,6 +1,9 @@
-import { useContext, useRef } from "react";
-import ContainerThemeSwitcher from "./style";
+import { useContext } from "react";
 import { ColorModeContext } from "./ColorModeProvider";
+import Image from "next/image";
+import ContainerThemeSwitcher from "./style";
+import moonAndStars from "../../assets/icons/moon-and-stars.png";
+import sun from "../../assets/icons/sun.png";
 
 function ThemeSwitcherComponent() {
   const contexto = useContext(ColorModeContext);
@@ -10,12 +13,8 @@ function ThemeSwitcherComponent() {
         <input type="checkbox" onChange={contexto.toggleMode} />
         <div className="container">
           <div className="circle"></div>
-          <img
-            className="moon-icon"
-            src="/moon-and-stars.png"
-            alt="Moon and Star icon"
-          />
-          <img className="sun-icon" src="/sun.png" alt="sun icon" />
+          <Image src={moonAndStars} alt="Moon and Star icon" />
+          <Image src={sun} alt="sun icon" />
         </div>
       </label>
     </ContainerThemeSwitcher>

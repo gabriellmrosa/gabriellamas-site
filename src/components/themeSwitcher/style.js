@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 const ContainerThemeSwitcher = styled.div`
-  border: 1px solid red;
   display: flex;
+  width: 100%;
+  max-width: 1328px;
+  padding: 0 24px;
+  margin: 24px auto 0px auto;
   justify-content: flex-end;
   label {
     background: ${({ theme }) => theme.backgroundBase};
