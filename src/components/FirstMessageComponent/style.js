@@ -15,11 +15,11 @@ const FirstMessageArea = styled.div`
     .title {
       font-size: 9.42rem;
       line-height: 100%;
-      width: 89%;
+      max-width: 560px;
       margin-bottom: 24px;
     }
     .description {
-      width: 89%;
+      max-width: 560px;
     }
     .social-links {
       margin-top: 24px;
