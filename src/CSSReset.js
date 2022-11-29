@@ -74,6 +74,9 @@ const CSSReset = createGlobalStyle`
     display:flex;
     align-items:center;
   }
+  a:hover{
+    opacity:1;
+  }
 `;
 
 export default CSSReset;

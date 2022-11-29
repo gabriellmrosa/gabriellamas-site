@@ -6,6 +6,7 @@ import BehanceIcon from "../../assets/icons/BehanceIcon.js";
 import GithubIcon from "../../assets/icons/GithubIcon.js";
 import GmailIcon from "../../assets/icons/GmailIcon.js";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon.js";
+import TooltipElement from "../../elements/Tooltip";
 
 function FirstMessageComponent({ staticProps }) {
   const contexto = useContext(ColorModeContext);
@@ -23,6 +24,7 @@ function FirstMessageComponent({ staticProps }) {
             className="icon"
           >
             <LinkedinIcon theme={contexto.mode} />
+            <TooltipElement className={"tooltip"} text="Linkedin" />
           </a>
           <a
             href="mailto:gabrielldarts@gmail.com"
@@ -30,6 +32,7 @@ function FirstMessageComponent({ staticProps }) {
             className="icon"
           >
             <GmailIcon />
+            <TooltipElement className={"tooltip"} text="Email" />
           </a>
           <a
             href="https://github.com/gabriellamas"
@@ -37,6 +40,7 @@ function FirstMessageComponent({ staticProps }) {
             className="icon"
           >
             <GithubIcon theme={contexto.mode} />
+            <TooltipElement className={"tooltip"} text="Github" />
           </a>
           <a
             href="https://www.behance.net/gabriellamas"
@@ -44,6 +48,7 @@ function FirstMessageComponent({ staticProps }) {
             className="icon"
           >
             <BehanceIcon theme={contexto.mode} />
+            <TooltipElement className={"tooltip"} text="Behance" />
           </a>
           <a href="#" className="intern-link">
             <span>About me</span>

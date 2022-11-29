@@ -4,10 +4,9 @@ const FirstMessageArea = styled.div`
   position: relative;
   flex: 1;
   .floatingMessage {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translate(0%, -50%);
-    left: 0px;
     .author {
       font-weight: 400;
       margin-bottom: 8px;
@@ -25,6 +24,18 @@ const FirstMessageArea = styled.div`
       margin-top: 24px;
       display: flex;
       gap: 16px;
+    }
+    a {
+      position: relative;
+    }
+    .icon .tooltip {
+      opacity: 0;
+      transition: 300ms;
+      transform: translate(-50%, 25%);
+    }
+    .icon:hover .tooltip {
+      opacity: 1;
+      transform: translate(-50%, 0%);
     }
   }
 `;
