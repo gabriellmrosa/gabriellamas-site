@@ -1,6 +1,6 @@
-import styled, { ThemeContext } from "styled-components";
+import styled from "styled-components";
 
-const ContainerProjectsComponent = styled.div`
+const Container = styled.div`
   position: relative;
   flex: 1;
   display: flex;
@@ -16,4 +16,4 @@ const ContainerProjectsComponent = styled.div`
   }
 `;
 
-export default ContainerProjectsComponent;
+export default Container;

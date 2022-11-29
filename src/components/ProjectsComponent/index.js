@@ -1,4 +1,4 @@
-import ContainerProjectsComponent from "./style";
+import Container from "./style";
 import BuserLogo from "../../assets/logos/BuserLogo";
 import { useContext } from "react";
 import { ColorModeContext } from "../themeSwitcher/ColorModeProvider";
@@ -6,7 +6,7 @@ import { ColorModeContext } from "../themeSwitcher/ColorModeProvider";
 function ProjectsComponent() {
   const contexto = useContext(ColorModeContext);
   return (
-    <ContainerProjectsComponent>
+    <Container>
       <div className="project-container">
         <div className="moldure">
           <div className="square">
@@ -53,7 +53,7 @@ function ProjectsComponent() {
           </div>
         </div>
       </div>
-    </ContainerProjectsComponent>
+    </Container>
   );
 }
 
