@@ -1,0 +1,46 @@
+{
+    "projects": [
+        {
+            "title":"Buser intern products",
+            "description" : "At Buser I helped to build solutions for internal teams that analyzed incidents, refunds, tax issues, among others.",
+            "logo": "BuserLogo.svg",
+            "bgLogoColor":"#F11075", 
+            "href":"/buser"
+        },
+        {
+            "title":"DASA",
+            "description" : "At Dasa I helped start the first idea of ​​a dashboard that would be used by Dasa's customers.",
+            "logo": "DasaLogo.svg",
+            "bgLogoColor":"#000E40", 
+            "href":"/dasa"
+        },
+        {
+            "title":"Diesel father's day page",
+            "description" : "Diesel asked me to create a special Father's Day page with a cool promotion.",
+            "logo": "DieselLogo.png",
+            "bgLogoColor":"#000", 
+            "href":"/diesel"
+        },
+        {
+            "title":"Training Play",
+            "description" : "Training Play is an personal project, a application to help you practice physical exercises, tips, videos and other things.",
+            "logo": "TrainingPlayLogo.svg",
+            "bgLogoColor":"#222831", 
+            "href":"/training-play"
+        },
+        {
+            "title":"Avec schedulling and app redesign",
+            "description" : "Avec is a company that has digital solutions for barbershops, beauty salons, aesthetics and others, in this company.",
+            "logo": "AvecLogo.png",
+            "bgLogoColor":"#5B53C5", 
+            "href":"/avec"
+        },
+        {
+            "title":"Porto Seguro Carro Fácil",
+            "description" : "I helped Porto Seguro Carro Fácil to test a new visual way of making their sales pages.",
+            "logo": "CarroFacilLogo.svg",
+            "bgLogoColor":"#009FE3", 
+            "href":"/carro-facil"
+        }
+    ]
+}

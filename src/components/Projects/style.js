@@ -6,14 +6,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 80px;
-  .moldure {
-    display: flex;
-    border: 10px solid ${({ theme }) => theme.textColor900};
-    height: 400px;
-  }
-  .square {
-    background: #f11075;
-  }
+  padding-top: ${({ topDistance }) => topDistance - 100 + "px"};
+  padding-bottom: 250px;
 `;
 
 export default Container;

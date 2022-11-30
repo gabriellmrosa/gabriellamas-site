@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FirstMessageArea = styled.div`
+const Container = styled.div`
   position: relative;
   flex: 1;
   .floatingMessage {
@@ -19,6 +19,7 @@ const FirstMessageArea = styled.div`
     }
     .description {
       max-width: 560px;
+      font-weight: 400;
     }
     .social-links {
       margin-top: 24px;
@@ -41,4 +42,4 @@ const FirstMessageArea = styled.div`
   }
 `;
 
-export default FirstMessageArea;
+export default Container;

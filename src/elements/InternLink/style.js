@@ -7,7 +7,7 @@ const Container = styled.div`
   line-height: 150%;
   display: flex;
   align-items: center;
-  padding: 4px 4px;
+  padding: 4px 0px;
   transition: 300ms;
   svg {
     transition: 300ms;

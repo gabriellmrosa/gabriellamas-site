@@ -1,6 +1,6 @@
-import FirstMessageArea from "./style";
 import { useContext } from "react";
 import { ColorModeContext } from "../themeSwitcher/ColorModeProvider";
+import Container from "./style";
 import BehanceIcon from "../../assets/icons/BehanceIcon.js";
 import GithubIcon from "../../assets/icons/GithubIcon.js";
 import GmailIcon from "../../assets/icons/GmailIcon.js";
@@ -8,12 +8,12 @@ import LinkedinIcon from "../../assets/icons/LinkedinIcon.js";
 import TooltipElement from "../../elements/Tooltip";
 import InternLink from "../../elements/InternLink";
 
-function FirstMessageComponent({ staticProps }) {
+function FirstMessage({ staticProps, floatingMessageRef }) {
   const contexto = useContext(ColorModeContext);
 
   return (
-    <FirstMessageArea>
-      <div className="floatingMessage">
+    <Container>
+      <div className="floatingMessage" ref={floatingMessageRef}>
         <p className="author">{staticProps.authorName}</p>
         <h1 className="title">{staticProps.h1Title}</h1>
         <h5 className="description">{staticProps.description}</h5>
@@ -53,8 +53,8 @@ function FirstMessageComponent({ staticProps }) {
           <InternLink href="/about" text="About me" />
         </div>
       </div>
-    </FirstMessageArea>
+    </Container>
   );
 }
 
-export default FirstMessageComponent;
+export default FirstMessage;

@@ -4,7 +4,7 @@ const Tooltip = styled.div`
   position: absolute;
   z-index: 2;
   font-size: 1.2rem;
-  top: -40px;
+  top: -45px;
   left: 50%;
   padding: 8px 8px;
   background: ${({ theme }) => theme.textColor900};

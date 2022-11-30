@@ -13,8 +13,12 @@ function ThemeSwitcherComponent() {
         <input type="checkbox" onChange={contexto.toggleMode} />
         <div className="container">
           <div className="circle"></div>
-          <Image src={moonAndStars} alt="Moon and Star icon" />
-          <Image src={sun} alt="sun icon" />
+          <Image
+            className="moon-icon"
+            src={moonAndStars}
+            alt="Moon and Star icon"
+          />
+          <Image className="sun-icon" src={sun} alt="sun icon" />
         </div>
       </label>
     </ContainerThemeSwitcher>

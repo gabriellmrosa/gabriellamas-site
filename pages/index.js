@@ -1,8 +1,19 @@
-import FirstMessageComponent from "../src/components/FirstMessageComponent";
-import ProjectsComponent from "../src/components/ProjectsComponent";
+import { useEffect, useRef, useState } from "react";
+import FirstMessage from "../src/components/FirstMessage";
+import Projects from "../src/components/Projects";
 import ThemeSwitcherComponent from "../src/components/themeSwitcher";
 
 export function HomePage(props) {
+  const floatingMessageRef = useRef();
+  const [topDistance, setTopDistance] = useState(null);
+
+  useEffect(() => {
+    setTopDistance(floatingMessageRef.current.getBoundingClientRect().top);
+    window.addEventListener("resize", (event) =>
+      setTopDistance(floatingMessageRef.current.getBoundingClientRect().top)
+    );
+  }, []);
+
   return (
     <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
       <ThemeSwitcherComponent />
@@ -10,14 +21,17 @@ export function HomePage(props) {
         style={{
           display: "flex",
           width: "100%",
-          maxWidth: "1328px",
+          maxWidth: "1280px",
           padding: "0px 24px",
           margin: "0px auto",
           flex: "1",
         }}
       >
-        <FirstMessageComponent staticProps={props} />
-        <ProjectsComponent />
+        <FirstMessage
+          staticProps={props}
+          floatingMessageRef={floatingMessageRef}
+        />
+        <Projects topDistance={topDistance} />
       </div>
     </div>
   );

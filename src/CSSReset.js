@@ -58,7 +58,7 @@ const CSSReset = createGlobalStyle`
   h5{
     line-height: 150%;
     font-size: 2.58rem;
-    font-weight: 400;
+    font-weight: 600;
     color: ${({ theme }) => theme.textColor700};
   }
   p{

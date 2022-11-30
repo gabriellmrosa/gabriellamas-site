@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 100%;
 `;
 
-export function AboutPage(props) {
+export function AvecPage(props) {
   return (
     <Container>
       <h1>{props.h1Title}</h1>
@@ -16,9 +16,9 @@ export function AboutPage(props) {
 export async function getStaticProps(context) {
   return {
     props: {
-      h1Title: "About Me",
+      h1Title: "Avec Page",
     },
   };
 }
 
-export default AboutPage;
+export default AvecPage;
