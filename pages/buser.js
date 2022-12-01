@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -6,13 +6,35 @@ const Container = styled.div`
   width: 100%;
 `;
 
+function useForm(propsFromForm) {
+  const [values, setValues] = useState(propsFromForm.initialValues);
+
+  return {
+    values,
+    handleChange: (event) => {
+      const value = event.target.value;
+      const name = event.target.name;
+      setValues({
+        ...values,
+        [name]: value,
+      });
+    },
+    clearForm() {
+      setValues({});
+    },
+  };
+}
+
 export function BuserPage(props) {
-  const verifyAccess = useCallback(async () => {
+  const formTryAccess = useForm({ initialValues: { password: "" } });
+
+  const verifyAccess = useCallback(async (event, password) => {
+    event.preventDefault();
     fetch(location.origin + "/api/password", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        body: JSON.stringify({ password: "xarope" }),
+        body: JSON.stringify({ password: password }),
       },
     })
       .then((response) => response.json())
@@ -22,13 +44,21 @@ export function BuserPage(props) {
       .catch((err) => console.log(err));
   }, []);
 
-  useEffect(() => {
-    verifyAccess();
-  }, []);
-
   return (
     <Container>
       <h1>{props.h1Title}</h1>
+      <form
+        onSubmit={(event) => verifyAccess(event, formTryAccess.values.password)}
+      >
+        <input
+          type="password"
+          name="password"
+          value={formTryAccess.values.password}
+          onChange={formTryAccess.handleChange}
+          required
+        />
+        <button>Tentar</button>
+      </form>
     </Container>
   );
 }
