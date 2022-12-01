@@ -7,11 +7,17 @@ export function HomePage(props) {
   const floatingMessageRef = useRef();
   const [topDistance, setTopDistance] = useState(null);
 
+  const handleResizeScreen = () => {
+    if (location.pathname === "/") {
+      setTopDistance(floatingMessageRef.current.getBoundingClientRect().top);
+    } else {
+      window.removeEventListener("resize", handleResizeScreen);
+    }
+  };
+
   useEffect(() => {
-    setTopDistance(floatingMessageRef.current.getBoundingClientRect().top);
-    window.addEventListener("resize", (event) =>
-      setTopDistance(floatingMessageRef.current.getBoundingClientRect().top)
-    );
+    handleResizeScreen();
+    window.addEventListener("resize", handleResizeScreen);
   }, []);
 
   return (
