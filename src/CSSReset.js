@@ -59,15 +59,31 @@ const CSSReset = createGlobalStyle`
     line-height: 150%;
     font-size: 2.58rem;
     font-weight: 600;
-    color: ${({ theme }) => theme.textColor700};
   }
   p{
-    line-height: 150%;
+    line-height:150%;
     font-size: 1.6rem;
     color: ${({ theme }) => theme.textColor700};
   }
   a:hover{
     opacity:1;
+  }
+  .bold{
+    font-weight:900;
+    color: ${({ theme }) => theme.textColor900};
+  }
+  .link-case-description{
+    color: ${({ theme }) => theme.textColor900};
+    text-decoration:underline;
+    font-size: 1.6rem;
+  }
+  ul{
+    font-size: 1.6rem;
+    color: ${({ theme }) => theme.textColor700};
+    padding-left: 32px;
+    li{
+      line-height:150%;
+    }
   }
 `;
 

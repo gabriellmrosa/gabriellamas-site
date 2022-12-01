@@ -20,6 +20,7 @@ const Container = styled.div`
     .description {
       max-width: 560px;
       font-weight: 400;
+      color: ${({ theme }) => theme.textColor700};
     }
     .social-links {
       margin-top: 24px;

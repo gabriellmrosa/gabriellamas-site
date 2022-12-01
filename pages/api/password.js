@@ -1,6 +1,8 @@
 export default async function handler(req, res) {
-  const reqPassword = await JSON.parse(req.headers.body).password;
+  const reqPassword = req.body.password;
   const originalPassword = "alohomora";
+
+  //request access limit
 
   if (reqPassword === originalPassword) {
     res.status(200).send({ access: "true" });
