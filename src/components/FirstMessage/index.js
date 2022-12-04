@@ -6,7 +6,7 @@ import GithubIcon from "../../assets/icons/GithubIcon.js";
 import GmailIcon from "../../assets/icons/GmailIcon.js";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon.js";
 import TooltipElement from "../../elements/Tooltip";
-import InternLink from "../../elements/InternLink";
+import { InternLinkArrowRight } from "../../elements/InternLink";
 
 function FirstMessage({ staticProps, floatingMessageRef }) {
   const contexto = useContext(ColorModeContext);
@@ -50,7 +50,7 @@ function FirstMessage({ staticProps, floatingMessageRef }) {
             <BehanceIcon theme={contexto.mode} />
             <TooltipElement className={"tooltip"} text="Behance" />
           </a>
-          <InternLink href="/about" text="About me" />
+          <InternLinkArrowRight href="/about" text="About me" />
         </div>
       </div>
     </Container>

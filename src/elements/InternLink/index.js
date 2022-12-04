@@ -1,19 +1,29 @@
 import Link from "next/link";
-import Container from "./style";
+import { ContainerRight, ContainerLeft } from "./style";
 import ArrowRightIcon from "../../assets/icons/ArrowRightIcon";
 import { ColorModeContext } from "../../components/themeSwitcher/ColorModeProvider";
 import { useContext } from "react";
 
-const InternLink = ({ text, ...rest }) => {
+export const InternLinkArrowRight = ({ text, ...rest }) => {
   const contexto = useContext(ColorModeContext);
   return (
     <Link {...rest}>
-      <Container>
+      <ContainerRight>
         <span>{text}</span>
         <ArrowRightIcon theme={contexto.mode} />
-      </Container>
+      </ContainerRight>
     </Link>
   );
 };
 
-export default InternLink;
+export const InternLinkArrowLeft = ({ text, ...rest }) => {
+  const contexto = useContext(ColorModeContext);
+  return (
+    <Link {...rest}>
+      <ContainerLeft>
+        <ArrowRightIcon theme={contexto.mode} />
+        <span>{text}</span>
+      </ContainerLeft>
+    </Link>
+  );
+};

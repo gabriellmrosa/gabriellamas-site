@@ -1,6 +1,6 @@
 import Container from "./style";
 import Link from "next/link";
-import InternLink from "../../../elements/InternLink";
+import { InternLinkArrowRight } from "../../../elements/InternLink";
 
 function Project({ logo, bgLogoColor, title, description, href }) {
   return (
@@ -12,7 +12,7 @@ function Project({ logo, bgLogoColor, title, description, href }) {
         <div className="description">
           <h5>{title}</h5>
           <p>{description}</p>
-          <InternLink href={href} text="See more" />
+          <InternLinkArrowRight href={href} text="See more" />
         </div>
       </Container>
     </Link>

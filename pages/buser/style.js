@@ -6,6 +6,9 @@ const Container = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  .back-link {
+    margin: 32px;
+  }
 
   .body {
     position: relative;

@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import Container from "./style";
+import { InternLinkArrowLeft } from "../../src/elements/InternLink";
 import BannerBuser from "../../src/assets/images/banner-buser.png";
 import Image from "next/image";
 
@@ -43,6 +44,7 @@ export function BuserPage(props) {
 
   return (
     <Container>
+      <InternLinkArrowLeft text="HOME" href="/" />
       <form
         onSubmit={(event) => verifyAccess(event, formTryAccess.values.password)}
       >
