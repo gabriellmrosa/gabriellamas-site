@@ -41,6 +41,22 @@ const Container = styled.div`
       margin: 16px 0px;
     }
   }
+
+  @media (max-width: 580px) {
+    height: auto;
+    flex-direction: column;
+    .square,
+    .description {
+      position: relative;
+      transform: translate(0, 0);
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    .square {
+      height: auto;
+    }
+  }
 `;
 
 export default Container;

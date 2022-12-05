@@ -40,6 +40,12 @@ const Container = styled.div`
       max-width: 500px;
     }
   }
+
+  @media (max-width: 1115px) {
+    h2 {
+      font-size: 17vw;
+    }
+  }
 `;
 
 export default Container;

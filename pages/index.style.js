@@ -11,9 +11,7 @@ const ContainerResponsive = styled.div`
   @media (max-width: 1115px) {
     flex-direction: column;
     gap: 80px;
-    .floating-message {
-      position: relative;
-    }
+    padding: 0px 40px;
   }
 `;
 
