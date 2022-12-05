@@ -46,7 +46,7 @@ const Container = styled.div`
       position: relative;
     }
     .title {
-      font-size: 17vw;
+      font-size: 16vw;
     }
   }
 `;
