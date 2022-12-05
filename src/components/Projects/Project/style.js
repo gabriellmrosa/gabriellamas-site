@@ -54,7 +54,7 @@ const Container = styled.div`
       left: 0;
     }
     .square {
-      height: auto;
+      height: 180px;
     }
   }
 `;
