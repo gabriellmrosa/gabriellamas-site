@@ -10,6 +10,7 @@ const Tooltip = styled.div`
   background: ${({ theme }) => theme.textColor900};
   color: ${({ theme }) => theme.textColor300};
   border-radius: 4px;
+  opacity: 0;
 
   &:before {
     content: "";

@@ -1,19 +1,19 @@
 import { useContext } from "react";
 import { ColorModeContext } from "../themeSwitcher/ColorModeProvider";
+import { InternLinkArrowRight } from "../../elements/InternLink";
 import Container from "./style";
 import BehanceIcon from "../../assets/icons/BehanceIcon.js";
 import GithubIcon from "../../assets/icons/GithubIcon.js";
 import GmailIcon from "../../assets/icons/GmailIcon.js";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon.js";
 import TooltipElement from "../../elements/Tooltip";
-import { InternLinkArrowRight } from "../../elements/InternLink";
 
 function FirstMessage({ staticProps, floatingMessageRef }) {
   const contexto = useContext(ColorModeContext);
 
   return (
     <Container>
-      <div className="floatingMessage" ref={floatingMessageRef}>
+      <div className="floating-message" ref={floatingMessageRef}>
         <p className="author">{staticProps.authorName}</p>
         <h1 className="title">{staticProps.h1Title}</h1>
         <h5 className="description">{staticProps.description}</h5>

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import FirstMessage from "../src/components/FirstMessage";
 import Projects from "../src/components/Projects";
 import ThemeSwitcherComponent from "../src/components/themeSwitcher";
+import ContainerResponsive from "./index.style";
 
 export function HomePage(props) {
   const floatingMessageRef = useRef();
@@ -23,22 +24,13 @@ export function HomePage(props) {
   return (
     <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
       <ThemeSwitcherComponent />
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          maxWidth: "1280px",
-          padding: "0px 24px",
-          margin: "0px auto",
-          flex: "1",
-        }}
-      >
+      <ContainerResponsive>
         <FirstMessage
           staticProps={props}
           floatingMessageRef={floatingMessageRef}
         />
         <Projects topDistance={topDistance} />
-      </div>
+      </ContainerResponsive>
     </div>
   );
 }

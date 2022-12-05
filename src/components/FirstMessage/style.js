@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   position: relative;
   flex: 1;
-  .floatingMessage {
+  .floating-message {
     position: fixed;
     top: 50%;
     transform: translate(0%, -50%);
@@ -32,7 +32,6 @@ const Container = styled.div`
       position: relative;
     }
     .icon .tooltip {
-      opacity: 0;
       transition: 300ms;
       transform: translate(-50%, 25%);
     }

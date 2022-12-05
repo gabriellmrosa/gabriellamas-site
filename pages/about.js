@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { InternLinkArrowLeft } from "../src/elements/InternLink";
 
 const Container = styled.div`
   border: 10px solid ${({ theme }) => theme.textColor900};
@@ -8,6 +9,7 @@ const Container = styled.div`
 export function AboutPage(props) {
   return (
     <Container>
+      <InternLinkArrowLeft text="HOME" href="/" />
       <h1>{props.h1Title}</h1>
     </Container>
   );

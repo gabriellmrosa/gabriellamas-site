@@ -19,8 +19,8 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     padding: 32px;
-    svg {
-      width: 100%;
+    img {
+      max-width: 100%;
     }
   }
   .description {
