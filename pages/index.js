@@ -11,18 +11,14 @@ export function HomePage(props) {
   const [topDistance, setTopDistance] = useState(null);
 
   const handleResizeScreen = () => {
-    if (router.pathname === "/" && window.innerWidth > 1115) {
-      console.log("rodei");
-      setTopDistance(floatingMessageRef.current.getBoundingClientRect().top);
-    } else {
-      window.removeEventListener("resize", handleResizeScreen);
-    }
+    setTopDistance(floatingMessageRef.current.getBoundingClientRect().top);
   };
 
   useEffect(() => {
-    handleResizeScreen();
-    window.addEventListener("resize", handleResizeScreen);
-  }, []);
+    if (router.pathname === "/" && window.innerWidth > 1115) {
+      handleResizeScreen();
+    }
+  }, [router]);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>

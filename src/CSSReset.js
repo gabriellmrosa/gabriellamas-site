@@ -6,8 +6,10 @@ const CSSReset = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
   }
   html {
+    position:relative;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -15,6 +17,7 @@ const CSSReset = createGlobalStyle`
   }
   body {
     font-family: "Roboto", sans-serif;
+    min-height: 100%;
     background: ${({ theme }) => theme.backgroundBase};
   }
   /* NextJS */
@@ -76,6 +79,15 @@ const CSSReset = createGlobalStyle`
     color: ${({ theme }) => theme.textColor900};
     text-decoration:underline;
     font-size: 1.6rem;
+  }
+  .link-social{
+    color: ${({ theme }) => theme.textColor300};
+    text-decoration:underline;
+    font-size: 1.6rem;
+    display:inline-flex;
+  }
+  .link-social {
+    margin:0px 0px 0px 8px;
   }
   ul{
     font-size: 1.6rem;

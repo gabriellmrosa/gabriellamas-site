@@ -26,13 +26,13 @@ export const ContainerLeft = styled.div`
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 150%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding: 4px 0px;
   transition: 300ms;
   svg {
     transition: 300ms;
-    transform: rotate(180deg);
+    transform: translate(0%, 0) rotate(180deg);
   }
   &:hover {
     background: ${({ theme }) => theme.textColor300};
