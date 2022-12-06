@@ -5,23 +5,23 @@ import { ColorModeContext } from "../../components/themeSwitcher/ColorModeProvid
 import { useContext } from "react";
 
 export const InternLinkArrowRight = ({ text, ...rest }) => {
-  const contexto = useContext(ColorModeContext);
+  const context = useContext(ColorModeContext);
   return (
     <Link {...rest}>
       <ContainerRight>
         <span>{text}</span>
-        <ArrowRightIcon theme={contexto.mode} />
+        <ArrowRightIcon theme={context.mode} />
       </ContainerRight>
     </Link>
   );
 };
 
 export const InternLinkArrowLeft = ({ text, ...rest }) => {
-  const contexto = useContext(ColorModeContext);
+  const context = useContext(ColorModeContext);
   return (
     <Link {...rest}>
       <ContainerLeft>
-        <ArrowRightIcon theme={contexto.mode} />
+        <ArrowRightIcon theme={context.mode} />
         <span>{text}</span>
       </ContainerLeft>
     </Link>

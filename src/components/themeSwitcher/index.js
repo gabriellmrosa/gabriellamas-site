@@ -6,11 +6,11 @@ import moonAndStars from "../../assets/icons/moon-and-stars.png";
 import sun from "../../assets/icons/sun.png";
 
 function ThemeSwitcherComponent() {
-  const contexto = useContext(ColorModeContext);
+  const context = useContext(ColorModeContext);
   return (
     <ContainerThemeSwitcher>
       <label className="theme-switcher">
-        <input type="checkbox" onChange={contexto.toggleMode} />
+        <input type="checkbox" onChange={context.toggleMode} />
         <div className="container">
           <div className="circle"></div>
           <Image

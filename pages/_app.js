@@ -40,10 +40,10 @@ export function MyApp({ Component, pageProps }) {
     },
   };
 
-  const contexto = useContext(ColorModeContext);
+  const context = useContext(ColorModeContext);
 
   return (
-    <ThemeProvider theme={themes[contexto.mode]}>
+    <ThemeProvider theme={themes[context.mode]}>
       <Head>
         <link
           rel="apple-touch-icon"

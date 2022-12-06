@@ -9,7 +9,7 @@ import LinkedinIcon from "../../assets/icons/LinkedinIcon.js";
 import TooltipElement from "../../elements/Tooltip";
 
 function FirstMessage({ staticProps, floatingMessageRef }) {
-  const contexto = useContext(ColorModeContext);
+  const context = useContext(ColorModeContext);
 
   return (
     <Container>
@@ -23,7 +23,7 @@ function FirstMessage({ staticProps, floatingMessageRef }) {
             target="_blank"
             className="icon"
           >
-            <LinkedinIcon theme={contexto.mode} />
+            <LinkedinIcon theme={context.mode} />
             <TooltipElement className={"tooltip"} text="Linkedin" />
           </a>
           <a
@@ -39,7 +39,7 @@ function FirstMessage({ staticProps, floatingMessageRef }) {
             target="_blank"
             className="icon"
           >
-            <GithubIcon theme={contexto.mode} />
+            <GithubIcon theme={context.mode} />
             <TooltipElement className={"tooltip"} text="Github" />
           </a>
           <a
@@ -47,7 +47,7 @@ function FirstMessage({ staticProps, floatingMessageRef }) {
             target="_blank"
             className="icon"
           >
-            <BehanceIcon theme={contexto.mode} />
+            <BehanceIcon theme={context.mode} />
             <TooltipElement className={"tooltip"} text="Behance" />
           </a>
           <InternLinkArrowRight href="/about" text="About me" />

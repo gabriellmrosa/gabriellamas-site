@@ -1,6 +1,6 @@
-import { useCallback, useState } from "react";
-import Container from "./style";
+import { useCallback, useContext, useState } from "react";
 import { InternLinkArrowLeft } from "../../src/elements/InternLink";
+import Container from "./style";
 import Image from "next/image";
 import BannerBuser from "../../src/assets/images/buser-page/banner-buser.png";
 import exampleFlowDiscovery from "../../src/assets/images/buser-page/example-flow-discovery.png";
@@ -14,7 +14,7 @@ import stepfillsExample from "../../src/assets/images/buser-page/step fills exam
 import stepFillsAddingCost from "../../src/assets/images/buser-page/step fills example 2.png";
 import memoji from "../../src/assets/images/memoji-Image.png";
 import LockIcon from "../../src/assets/icons/LockIcon";
-import { useRouter } from "next/router";
+import { ColorModeContext } from "../../src/components/themeSwitcher/ColorModeProvider";
 
 function useForm(propsFromForm) {
   const [values, setValues] = useState(propsFromForm.initialValues);
@@ -36,10 +36,7 @@ function useForm(propsFromForm) {
 }
 
 export function BuserPage(props) {
-  const router = useRouter();
-  // console.log("basePath", router.basePath);
-  // console.log("pathname", router.pathname);
-  // console.log("asPath", router.asPath);
+  const context = useContext(ColorModeContext);
   const formTryAccess = useForm({ initialValues: { password: "" } });
 
   const verifyAccess = useCallback(async (event, password) => {
@@ -95,7 +92,7 @@ export function BuserPage(props) {
               required
             />
             <span>Password</span>
-            <LockIcon />
+            <LockIcon theme={context.mode} />
           </label>
           <button>Reveal</button>
         </form>
