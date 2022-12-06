@@ -141,6 +141,19 @@ const Container = styled.div`
       font-size: 17vw;
     }
   }
+
+  @media (max-width: 476px) {
+    .container-form {
+      flex-direction: column;
+      img {
+        width: 150px;
+      }
+    }
+    form {
+      align-items: center;
+      text-align: center;
+    }
+  }
 `;
 
 export default Container;

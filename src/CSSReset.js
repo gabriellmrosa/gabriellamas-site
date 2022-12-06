@@ -85,10 +85,12 @@ const CSSReset = createGlobalStyle`
     text-decoration:underline;
     font-size: 1.6rem;
     display:inline-flex;
-  }
-  .link-social {
     margin:0px 0px 0px 8px;
+    &:hover{
+      opacity:.5;
+    }
   }
+ 
   ul{
     font-size: 1.6rem;
     color: ${({ theme }) => theme.textColor700};
