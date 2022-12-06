@@ -22,13 +22,14 @@ const Container = styled.div`
     * {
       margin: 24px 0px;
     }
-    .image-container {
+    figure {
+      width: 100%;
       img {
         width: 100%;
         height: auto;
         margin: 0px;
       }
-      p {
+      figcaption {
         font-size: 1.2rem;
         color: ${({ theme }) => theme.textColor600};
         margin: 0px;
