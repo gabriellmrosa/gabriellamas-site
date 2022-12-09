@@ -8,9 +8,6 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  .unpublic {
-    display: none;
-  }
   .container-form {
     position: fixed;
     z-index: 10;
@@ -152,6 +149,9 @@ const Container = styled.div`
     form {
       align-items: center;
       text-align: center;
+      input {
+        min-height: 40px;
+      }
     }
   }
 `;
