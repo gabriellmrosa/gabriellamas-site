@@ -8,18 +8,43 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(0%, 50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0%, 0);
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translate(0%, 0%);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0%, 50%);
+    }
+  }
   .container-form {
     position: fixed;
     z-index: 10;
     bottom: 0px;
     left: 0px;
     background: ${({ theme }) => theme.textColor900};
+    pointer-events: ${({ access }) => (access === "false" ? "auto" : "none")};
     width: 100%;
     height: auto;
     padding: 40px 32px;
     display: flex;
     justify-content: center;
     align-items: center;
+    ${({ access }) => console.log("styled access", access)}
+    animation: ${({ access }) =>
+      access === "false" ? "fadeIn 600ms both" : "fadeOut 600ms both"};
+
     img {
       width: 220px;
       height: auto;

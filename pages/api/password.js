@@ -1,11 +1,30 @@
+import Cors from "cors";
+
+//CORS [x]
+//ACL  [ ]
+//CSRF [ ]
+
+const cors = Cors({
+  methods: ["POST", "GET", "HEAD"],
+});
+
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+
+      return resolve(result);
+    });
+  });
+}
+
 export default async function handler(req, res) {
+  await runMiddleware(req, res, cors);
+
   const reqPassword = req.body.password;
   const originalPassword = "alohomora";
-
-  //request access limit
-  //CSRF
-  //CORS
-  //ACL
 
   if (reqPassword === originalPassword) {
     res.status(200).send({ access: "true" });

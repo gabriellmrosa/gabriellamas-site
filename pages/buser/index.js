@@ -1,4 +1,4 @@
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useContext, useState, useRef } from "react";
 import { InternLinkArrowLeft } from "../../src/elements/InternLink";
 import { ColorModeContext } from "../../src/components/themeSwitcher/ColorModeProvider";
 import Container from "./style";
@@ -28,6 +28,8 @@ function useForm(propsFromForm) {
 
 export function BuserPage(props) {
   const [access, setAccess] = useState(false);
+  console.log("access compponent", access);
+  const passwordContainer = useRef();
 
   const context = useContext(ColorModeContext);
   const formTryAccess = useForm({ initialValues: { password: "" } });
@@ -44,54 +46,56 @@ export function BuserPage(props) {
       .then((response) => response.json())
       .then((data) => {
         setAccess(data.access);
+        console.log("data.access", data.access);
+        passwordContainer.current.addEventListener("onanimationend", () =>
+          console.log("cabou animacao")
+        );
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <Container>
-      {!access && (
-        <div className="container-form">
-          <Image src={memoji} alt="My memoji from apple" />
-          <form
-            onSubmit={(event) =>
-              verifyAccess(event, formTryAccess.values.password)
-            }
-          >
-            <p>
-              This case may have unpublic legal content, if you are a recruiter
-              contact me to receive the password.
-              <a
-                className="link-social"
-                href="https://www.linkedin.com/in/gabriel-lamas/"
-                target="_blank"
-              >
-                Linkedin
-              </a>
-              <a
-                className="link-social"
-                href="mailto:gabrielldarts@gmail.com"
-                target="_blank"
-              >
-                Email
-              </a>
-            </p>
+    <Container access={`${access}`}>
+      <div className="container-form" ref={passwordContainer}>
+        <Image src={memoji} alt="My memoji from apple" />
+        <form
+          onSubmit={(event) =>
+            verifyAccess(event, formTryAccess.values.password)
+          }
+        >
+          <p>
+            This case may have unpublic legal content, if you are a recruiter
+            contact me to receive the password.
+            <a
+              className="link-social"
+              href="https://www.linkedin.com/in/gabriel-lamas/"
+              target="_blank"
+            >
+              Linkedin
+            </a>
+            <a
+              className="link-social"
+              href="mailto:gabrielldarts@gmail.com"
+              target="_blank"
+            >
+              Email
+            </a>
+          </p>
 
-            <label>
-              <input
-                type="password"
-                name="password"
-                value={formTryAccess.values.password}
-                onChange={formTryAccess.handleChange}
-                required
-              />
-              <span>Password</span>
-              <LockIcon theme={context.mode} />
-            </label>
-            <button>Reveal</button>
-          </form>
-        </div>
-      )}
+          <label>
+            <input
+              type="password"
+              name="password"
+              value={formTryAccess.values.password}
+              onChange={formTryAccess.handleChange}
+              required
+            />
+            <span>Password</span>
+            <LockIcon theme={context.mode} />
+          </label>
+          <button>Reveal</button>
+        </form>
+      </div>
 
       <div className="body">
         <InternLinkArrowLeft text="HOME" href="/" />
