@@ -3,6 +3,9 @@ export default async function handler(req, res) {
   const originalPassword = "alohomora";
 
   //request access limit
+  //CSRF
+  //CORS
+  //ACL
 
   if (reqPassword === originalPassword) {
     res.status(200).send({ access: "true" });
