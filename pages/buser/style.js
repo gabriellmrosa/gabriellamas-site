@@ -44,7 +44,22 @@ const Container = styled.div`
     ${({ access }) => console.log("styled access", access)}
     animation: ${({ access }) =>
       access === "false" ? "fadeIn 600ms both" : "fadeOut 600ms both"};
-
+    .loading-svg {
+      position: absolute;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 100px;
+      }
+    }
     img {
       width: 220px;
       height: auto;
@@ -99,10 +114,12 @@ const Container = styled.div`
           transition: 300ms;
         }
 
-        input:focus ~ svg {
+        input:focus ~ svg,
+        input:not(:placeholder-shown) ~ svg {
           opacity: 1;
         }
-        input:focus + span {
+        input:focus + span,
+        input:not(:placeholder-shown) + span {
           opacity: 1;
           transform: translate(0%, -100%);
           top: -10%;

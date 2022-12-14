@@ -7,6 +7,7 @@ import BannerBuser from "../../src/assets/images/buser-page/banner-buser.png";
 import memoji from "../../src/assets/images/memoji-Image.png";
 import LockIcon from "../../src/assets/icons/LockIcon";
 import UnpublicOne from "../../src/components/unpublic/unpublicOne";
+import LoadingSvg from "../../src/elements/LoadingSvg";
 
 function useForm(propsFromForm) {
   const [values, setValues] = useState(propsFromForm.initialValues);
@@ -28,6 +29,7 @@ function useForm(propsFromForm) {
 
 export function BuserPage(props) {
   const [access, setAccess] = useState(false);
+  const [loadingAccess, seLoadingtAccess] = useState(false);
   console.log("access compponent", access);
   const passwordContainer = useRef();
 
@@ -36,6 +38,7 @@ export function BuserPage(props) {
 
   const verifyAccess = useCallback(async (event, password) => {
     event.preventDefault();
+    seLoadingtAccess(true);
     fetch(location.origin + "/api/password", {
       method: "POST",
       headers: {
@@ -46,7 +49,7 @@ export function BuserPage(props) {
       .then((response) => response.json())
       .then((data) => {
         setAccess(data.access);
-        console.log("data.access", data.access);
+        seLoadingtAccess(false);
         passwordContainer.current.addEventListener("onanimationend", () =>
           console.log("cabou animacao")
         );
@@ -57,6 +60,7 @@ export function BuserPage(props) {
   return (
     <Container access={`${access}`}>
       <div className="container-form" ref={passwordContainer}>
+        {loadingAccess && <LoadingSvg className="loading-svg" />}
         <Image src={memoji} alt="My memoji from apple" />
         <form
           onSubmit={(event) =>
@@ -86,6 +90,7 @@ export function BuserPage(props) {
             <input
               type="password"
               name="password"
+              placeholder=" "
               value={formTryAccess.values.password}
               onChange={formTryAccess.handleChange}
               required
