@@ -99,6 +99,46 @@ const CSSReset = createGlobalStyle`
       line-height:150%;
     }
   }
+
+
+  //DEFAULT CSS FOR CASE PROJECTS ALL INSIDE DE "BODY" CLASS DIV
+  .body-case {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 964px;
+    width: 100%;
+    margin: 32px auto;
+    padding: 0px 32px;
+    gap: 32px;
+    h2 {
+      max-width: 500px;
+      margin-bottom: 80px;
+    }
+    li + li {
+      margin-top: 24px;
+    }
+    figure {
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+        margin: 0px;
+      }
+      figcaption {
+        font-size: 1.2rem;
+        color: ${({ theme }) => theme.textColor600};
+        margin: 0px;
+        text-align: center;
+      }
+    }
+    @media (max-width: 1115px) {
+      h2 {
+        font-size: 17vw;
+      }
+    }
+
+  }
 `;
 
 export default CSSReset;

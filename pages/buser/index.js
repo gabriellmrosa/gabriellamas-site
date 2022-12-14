@@ -102,11 +102,20 @@ export function BuserPage(props) {
         </form>
       </div>
 
-      <div className="body">
+      <div className="body-case">
         <InternLinkArrowLeft text="HOME" href="/" />
-        <h2>{props.h1Title}</h2>
-        <h5>{props.t1}</h5>
-        <p>{props.t2}</p>
+        <h2>Buser internal products</h2>
+        <h5>First, what is Buser?</h5>
+        <p>
+          Buser is an app, created in 2016, like a Uber but for bus. In Brazil
+          we have many monopolysis that dificult de progress of the country and
+          the ”bus cartel” is one of then, this makes the passport value
+          expansive, less time options for the client and another's problems,
+          Buser solution is making partnertship with bus travel companys and
+          conecting all in one app, the ideia of the app is centralize all
+          demand in one local to make more less pricing to the client and bring
+          demand for de partners.
+        </p>
         <a
           className="link-case-description"
           href="https://buser.com.br"
@@ -128,16 +137,6 @@ export function BuserPage(props) {
       </div>
     </Container>
   );
-}
-
-export async function getStaticProps(context) {
-  return {
-    props: {
-      h1Title: "Buser internal products",
-      t1: "First, what is Buser?",
-      t2: "Buser is an app, created in 2016, like a Uber but for bus. In Brazil we have many monopolysis that dificult de progress of the country and the ”bus cartel” is one of then, this makes the passport value expansive, less time options for the client and another's problems, Buser solution is making partnertship with bus travel companys and conecting all in one app, the ideia of the app is centralize all demand in one local to make more less pricing to the client and bring demand for de partners.",
-    },
-  };
 }
 
 export default BuserPage;

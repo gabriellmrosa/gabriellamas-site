@@ -143,43 +143,6 @@ const Container = styled.div`
   .back-link {
     margin: 32px;
   }
-  .body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-width: 964px;
-    width: 100%;
-    margin: 32px auto;
-    padding: 0px 32px;
-    gap: 32px;
-    h2 {
-      max-width: 500px;
-      margin-bottom: 80px;
-    }
-    li + li {
-      margin-top: 24px;
-    }
-    figure {
-      width: 100%;
-      img {
-        width: 100%;
-        height: auto;
-        margin: 0px;
-      }
-      figcaption {
-        font-size: 1.2rem;
-        color: ${({ theme }) => theme.textColor600};
-        margin: 0px;
-        text-align: center;
-      }
-    }
-  }
-
-  @media (max-width: 1115px) {
-    h2 {
-      font-size: 17vw;
-    }
-  }
 
   @media (max-width: 476px) {
     .container-form {
