@@ -89,60 +89,60 @@ export function TrainingPlayPage(props) {
 
         <div class="images-avec">
           <figure>
-            <Image src={avec1h} alt="App screen" />
+            <Image unoptimized={true} src={avec1h} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
           <figure>
-            <Image src={avec2} alt="App screen" />
-            <figcaption>App screen</figcaption>
-          </figure>
-
-          <figure>
-            <Image src={avec3} alt="App screen" />
-            <figcaption>App screen</figcaption>
-          </figure>
-          <figure>
-            <Image src={avec4} alt="App screen" />
+            <Image unoptimized={true} src={avec2} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
 
           <figure>
-            <Image src={avec5} alt="App screen" />
+            <Image unoptimized={true} src={avec3} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
           <figure>
-            <Image src={avec6} alt="App screen" />
-            <figcaption>App screen</figcaption>
-          </figure>
-
-          <figure>
-            <Image src={avec7} alt="App screen" />
-            <figcaption>App screen</figcaption>
-          </figure>
-          <figure>
-            <Image src={avec8} alt="App screen" />
+            <Image unoptimized={true} src={avec4} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
 
           <figure>
-            <Image src={avec9} alt="App screen" />
+            <Image unoptimized={true} src={avec5} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
           <figure>
-            <Image src={avec10} alt="App screen" />
+            <Image unoptimized={true} src={avec6} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
 
           <figure>
-            <Image src={avec11} alt="App screen" />
+            <Image unoptimized={true} src={avec7} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
           <figure>
-            <Image src={avec12} alt="App screen" />
+            <Image unoptimized={true} src={avec8} alt="App screen" />
+            <figcaption>App screen</figcaption>
+          </figure>
+
+          <figure>
+            <Image unoptimized={true} src={avec9} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
           <figure>
-            <Image src={avec13} alt="App screen" />
+            <Image unoptimized={true} src={avec10} alt="App screen" />
+            <figcaption>App screen</figcaption>
+          </figure>
+
+          <figure>
+            <Image unoptimized={true} src={avec11} alt="App screen" />
+            <figcaption>App screen</figcaption>
+          </figure>
+          <figure>
+            <Image unoptimized={true} src={avec12} alt="App screen" />
+            <figcaption>App screen</figcaption>
+          </figure>
+          <figure>
+            <Image unoptimized={true} src={avec13} alt="App screen" />
             <figcaption>App screen</figcaption>
           </figure>
         </div>
