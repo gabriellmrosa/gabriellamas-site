@@ -38,7 +38,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       h1Title: "FRONTEND & UX/UI DESIGNER",
-      authorName: "Gabriel Lamas",
+      authorName: "Gabriel Rosa",
       description:
         "Here you can see digital products I helped to build, my contacts, and some code projects",
     }, // will be passed to the page component as props
