@@ -19,7 +19,7 @@ function FirstMessage({ staticProps, floatingMessageRef }) {
         <h5 className="description">{staticProps.description}</h5>
         <div className="social-links">
           <a
-            href="https://www.linkedin.com/in/gabriel-lamas/"
+            href="https://www.linkedin.com/in/ga-rosa/"
             target="_blank"
             className="icon"
           >
@@ -35,20 +35,12 @@ function FirstMessage({ staticProps, floatingMessageRef }) {
             <TooltipElement className={"tooltip"} text="Email" />
           </a>
           <a
-            href="https://github.com/gabriellamas"
+            href="https://github.com/gabriellmrosa"
             target="_blank"
             className="icon"
           >
             <GithubIcon theme={context.mode} />
             <TooltipElement className={"tooltip"} text="Github" />
-          </a>
-          <a
-            href="https://www.behance.net/gabriellamas"
-            target="_blank"
-            className="icon"
-          >
-            <BehanceIcon theme={context.mode} />
-            <TooltipElement className={"tooltip"} text="Behance" />
           </a>
           <InternLinkArrowRight href="/about" text="About me" />
         </div>
