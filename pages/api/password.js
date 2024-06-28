@@ -1,9 +1,5 @@
 import Cors from "cors";
 
-//CORS [x]
-//ACL  [ ]
-//CSRF [ ]
-
 const cors = Cors({
   methods: ["POST", "GET", "HEAD"],
 });

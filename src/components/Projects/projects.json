@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+            "title":"App Vivo | Telefônica",
+            "description" : "At Vivo I helped to build solutions for internal teams that analyzed incidents, refunds, tax issues, among others.",
+            "logo": "VivoLogo.svg",
+            "bgLogoColor":"#660099", 
+            "href":"/vivo"
+        },
+        {
             "title":"Buser intern products",
             "description" : "At Buser I helped to build solutions for internal teams that analyzed incidents, refunds, tax issues, among others.",
             "logo": "BuserLogo.svg",
