@@ -68,8 +68,8 @@ export function BuserPage(props) {
           }
         >
           <p>
-            This case may have unpublic legal content, if you are a recruiter
-            contact me to receive the password.
+            This case may have unpublic legal content and it is in construction, if you are a recruiter
+            contact me to receive the entire case.
             <a
               className="link-social"
               href="https://www.linkedin.com/in/gabriel-lamas/"
@@ -86,19 +86,6 @@ export function BuserPage(props) {
             </a>
           </p>
 
-          <label>
-            <input
-              type="password"
-              name="password"
-              placeholder=" "
-              value={formTryAccess.values.password}
-              onChange={formTryAccess.handleChange}
-              required
-            />
-            <span>Password</span>
-            <LockIcon theme={context.mode} />
-          </label>
-          <button>Reveal</button>
         </form>
       </div>
 
@@ -107,31 +94,15 @@ export function BuserPage(props) {
         <h2>App Vivo | Telefônica</h2>
         <h5>First, what is Vivo?</h5>
         <p>
-          Vivo is an app, created in 2016, like a Uber but for bus. In Brazil
-          we have many monopolysis that dificult de progress of the country and
-          the ”bus cartel” is one of then, this makes the passport value
-          expansive, less time options for the client and another's problems,
-          Buser solution is making partnertship with bus travel companys and
-          conecting all in one app, the ideia of the app is centralize all
-          demand in one local to make more less pricing to the client and bring
-          demand for de partners.
+          This case is under construction...
         </p>
         <a
           className="link-case-description"
           href="https://vivo.com.br"
           target="_Blank"
         >
-          Buser website
+          Vivo website
         </a>
-        <figure>
-          <Image
-            src={BannerBuser}
-            alt="Banner do site da Buser no ano de 2022"
-          />
-          <figcaption>
-            Banner used on the Buser website in the year 2022
-          </figcaption>
-        </figure>
 
         {access && <UnpublicTwo />}
       </div>
