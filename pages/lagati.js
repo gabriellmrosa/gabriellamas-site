@@ -7,7 +7,7 @@ const Container = styled.div`
   width: 100%;
 `;
 
-export function AboutPage(props) {
+export function LagatiPage(props) {
   return (
     <Container>
       <div className="body-case">
@@ -24,4 +24,4 @@ export function AboutPage(props) {
   );
 }
 
-export default AboutPage;
+export default LagatiPage;
